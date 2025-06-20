@@ -1,45 +1,146 @@
 
-<?php
-/**
- * The main template file.
- *
- * @package dznews247
- */
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مدونة dznews247 - تغطية شاملة لأخبار الجزائر والإجراءات الإدارية والتقنية والمشاريع.">
+    <meta name="keywords" content="dznews247, أخبار الجزائر, خدمات, إجراءات إدارية, الإنترنت, مشاريع, سيو">
+    <meta name="author" content="dznews247">
+    <title>dznews247 | الصفحة الرئيسية</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        .social {
+            display: flex;
+            gap: 10px;
+        }
+        .social a {
+            text-decoration: none;
+            color: #333;
+        }
+        .nav-pages {
+            display: flex;
+            gap: 15px;
+        }
+        .nav-pages a {
+            text-decoration: none;
+            color: #0077cc;
+            font-weight: bold;
+        }
+        .logo-ads {
+            text-align: center;
+            padding: 15px;
+        }
+        .logo-ads img {
+            max-height: 80px;
+        }
+        .nav-categories {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background-color: #f0f0f0;
+            padding: 10px;
+            font-weight: bold;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+        }
+        .nav-categories a {
+            text-decoration: none;
+            color: #333;
+        }
+        main {
+            display: flex;
+            margin: 20px;
+        }
+        .content {
+            flex: 3;
+            padding: 10px;
+        }
+        .sidebar {
+            flex: 1;
+            padding: 10px;
+            background-color: #eee;
+            margin-right: 20px;
+            border-radius: 8px;
+        }
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="social">
+            <a href="#">فيسبوك</a>
+            <a href="#">تويتر</a>
+            <a href="#">بانترست</a>
+            <a href="#">تيكتوك</a>
+            <a href="#">LinkedIn</a>
+        </div>
+        <div class="nav-pages">
+            <a href="#">من نحن</a>
+            <a href="#">اتصل بنا</a>
+            <a href="#">اتفاقية الاستخدام</a>
+            <a href="#">سياسة الخصوصية</a>
+            <a href="#">السايت ماب</a>
+        </div>
+    </header>
 
-get_header(); ?>
+    <div class="logo-ads">
+        <img src="logo.png" alt="dznews247 logo">
+        <div>مساحة إعلانية</div>
+    </div>
 
-<div id="primary" class="content-area">
-    <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
+    <nav class="nav-categories">
+        <a href="#">الرئيسية</a>
+        <a href="#">أخبار</a>
+        <a href="#">إجراءات إدارية</a>
+        <a href="#">النت</a>
+        <a href="#">مشاريع</a>
+    </nav>
 
-    <main id="main" class="site-main <?php echo 'page-' . $paged;?>" role="main">
+    <main>
+        <div class="content">
+            <h2>مرحبا بكم في مدونة dznews247</h2>
+            <p>هنا تجدون آخر الأخبار والمعلومات الحصرية حول كل ما يهم المواطن الجزائري.</p>
+        </div>
+        <aside class="sidebar">
+            <h3>الأكثر قراءة</h3>
+            <ul>
+                <li><a href="#">عنوان المقال الأول</a></li>
+                <li><a href="#">عنوان المقال الثاني</a></li>
+                <li><a href="#">عنوان المقال الثالث</a></li>
+            </ul>
+            <h3>سجل بريدك الإلكتروني</h3>
+            <form>
+                <input type="email" placeholder="بريدك الإلكتروني" style="width: 100%; padding: 5px;">
+                <button type="submit" style="margin-top: 10px;">تسجيل</button>
+            </form>
+        </aside>
+    </main>
 
-        <header class="page-header">
-            <h1 class="site-title">dznews247</h1>
-            <p class="site-description">مدونة جزائرية للأخبار والمعلومات والخدمات الإلكترونية</p>
-        </header>
-
-        <?php if (have_posts()) : ?>
-
-            <div class="article-container">
-
-                <?php while (have_posts()) : the_post(); ?>
-
-                    <?php get_template_part('template-parts/content', get_post_format()); ?>
-
-                <?php endwhile; ?>
-
-            </div>
-
-            <?php activello_paging_nav(); ?>
-
-        <?php else : ?>
-
-            <?php get_template_part('template-parts/content', 'none'); ?>
-
-        <?php endif; ?>
-
-    </main><!-- #main -->
-</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+    <footer>
+        &copy; 2025 dznews247 - جميع الحقوق محفوظة.
+    </footer>
+</body>
+</html>
