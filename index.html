@@ -31,11 +31,11 @@
             text-decoration: none;
             color: #333;
         }
-        .nav {
+        .nav-pages {
             display: flex;
             gap: 15px;
         }
-        .nav a {
+        .nav-pages a {
             text-decoration: none;
             color: #0077cc;
             font-weight: bold;
@@ -46,6 +46,20 @@
         }
         .logo-ads img {
             max-height: 80px;
+        }
+        .nav-categories {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background-color: #f0f0f0;
+            padding: 10px;
+            font-weight: bold;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+        }
+        .nav-categories a {
+            text-decoration: none;
+            color: #333;
         }
         main {
             display: flex;
@@ -83,12 +97,7 @@
             <a href="#">تيكتوك</a>
             <a href="#">LinkedIn</a>
         </div>
-        <div class="nav">
-            <a href="#">الرئيسية</a>
-            <a href="#">أخبار</a>
-            <a href="#">إجراءات إدارية</a>
-            <a href="#">النت</a>
-            <a href="#">مشاريع</a>
+        <div class="nav-pages">
             <a href="#">من نحن</a>
             <a href="#">اتصل بنا</a>
             <a href="#">اتفاقية الاستخدام</a>
@@ -101,6 +110,14 @@
         <img src="logo.png" alt="dznews247 logo">
         <div>مساحة إعلانية</div>
     </div>
+
+    <nav class="nav-categories">
+        <a href="#">الرئيسية</a>
+        <a href="#">أخبار</a>
+        <a href="#">إجراءات إدارية</a>
+        <a href="#">النت</a>
+        <a href="#">مشاريع</a>
+    </nav>
 
     <main>
         <div class="content">
