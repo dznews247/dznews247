@@ -8,15 +8,69 @@
   <meta name="author" content="dznews247">
   <title>dznews247 | الصفحة الرئيسية</title>
   <style>
-    body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; padding: 0; direction: rtl; }
-    header, footer { background-color: #0077cc; color: white; padding: 10px 20px; }
-    .social, .nav-pages, .nav-categories { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
-    .nav-pages a, .nav-categories a, .social a { text-decoration: none; color: white; font-weight: bold; }
-    .logo-ads { text-align: center; padding: 20px; }
-    main { display: flex; flex-direction: row; gap: 20px; margin: 20px; }
-    .content { flex: 3; }
-    .sidebar { flex: 1; background: #eee; padding: 15px; border-radius: 8px; }
-    .card-list { display: flex; flex-wrap: wrap; gap: 15px; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+    }
+
+    header {
+      background-color: #0077cc;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .social {
+      display: flex;
+      gap: 15px;
+      direction: ltr;
+    }
+
+    .nav-pages {
+      display: flex;
+      gap: 15px;
+    }
+
+    .nav-pages a, .social a, .nav-categories a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    .logo-ads {
+      text-align: center;
+      padding: 20px;
+    }
+
+    main {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      margin: 20px;
+    }
+
+    .content {
+      flex: 3;
+    }
+
+    .sidebar {
+      flex: 1;
+      background: #eee;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .card-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
     .card {
       background: white;
       border: 1px solid #ccc;
@@ -26,16 +80,34 @@
       min-width: 260px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
+
     .card a {
       text-decoration: none;
       color: #0077cc;
       font-weight: bold;
     }
-    .card p { margin-top: 8px; color: #333; }
-    footer { text-align: center; margin-top: 40px; }
+
+    .card p {
+      margin-top: 8px;
+      color: #333;
+    }
+
+    footer {
+      background-color: #0077cc;
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+      margin-top: 40px;
+    }
+
     @media (max-width: 768px) {
-      main { flex-direction: column; }
-      .card { flex: 1 1 100%; }
+      main {
+        flex-direction: column;
+      }
+
+      .card {
+        flex: 1 1 100%;
+      }
     }
   </style>
 </head>
